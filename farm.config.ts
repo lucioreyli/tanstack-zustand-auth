@@ -1,6 +1,19 @@
 import { defineConfig } from "@farmfe/core";
 import farmJsPluginPostcss from "@farmfe/js-plugin-postcss";
+import farmJsPluginPostcssTw from "@farmfe/js-plugin-tailwindcss";
+import path from "node:path";
 
 export default defineConfig({
-	plugins: ["@farmfe/plugin-react", farmJsPluginPostcss()],
+	compilation: {
+		resolve: {
+			alias: {
+				"@/": path.join(process.cwd(), "src"),
+			},
+		},
+	},
+	plugins: [
+		"@farmfe/plugin-react",
+		farmJsPluginPostcss(),
+		farmJsPluginPostcssTw(),
+	],
 });

@@ -21,6 +21,7 @@
 		"@farmfe/cli": "^1.0.4",
 		"@farmfe/core": "^1.6.7",
 		"@farmfe/js-plugin-postcss": "^1.12.0",
+		"@farmfe/js-plugin-tailwindcss": "^0.0.13",
 		"@farmfe/plugin-react": "^1.2.0",
 		"@tailwindcss/postcss": "^4.1.5",
 		"@tanstack/router-cli": "^1.119.0",
