@@ -1,24 +1,35 @@
 {
-  "name": "tanstack-zustand-auth",
-  "version": "1.0.0",
-  "scripts": {
-    "dev": "farm start",
-    "start": "farm start",
-    "build": "farm build",
-    "preview": "farm preview",
-    "clean": "farm clean"
-  },
-  "dependencies": {
-    "react": "18",
-    "react-dom": "18"
-  },
-  "devDependencies": {
-    "@farmfe/cli": "^1.0.4",
-    "@farmfe/core": "^1.6.7",
-    "@farmfe/plugin-react": "^1.2.0",
-    "@types/react": "18",
-    "core-js": "^3.36.1",
-    "@types/react-dom": "18",
-    "react-refresh": "^0.14.0"
-  }
+	"name": "tanstack-zustand-auth",
+	"version": "1.0.0",
+	"scripts": {
+		"dev": "bun --bun run watch-routes & farm start",
+		"start": "bun run dev",
+		"build": "bun --bun run generate-routes && farm build",
+		"preview": "farm preview",
+		"clean": "farm clean",
+		"generate-routes": "tsr generate",
+		"watch-routes": "tsr watch"
+	},
+	"dependencies": {
+		"@tanstack/react-router": "^1.119.0",
+		"react": "18",
+		"react-dom": "18",
+		"zustand": "^5.0.4"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@farmfe/cli": "^1.0.4",
+		"@farmfe/core": "^1.6.7",
+		"@farmfe/js-plugin-postcss": "^1.12.0",
+		"@farmfe/plugin-react": "^1.2.0",
+		"@tailwindcss/postcss": "^4.1.5",
+		"@tanstack/router-cli": "^1.119.0",
+		"@tanstack/router-plugin": "^1.119.0",
+		"@types/react": "18",
+		"@types/react-dom": "18",
+		"core-js": "^3.36.1",
+		"postcss": "^8.5.3",
+		"react-refresh": "^0.14.0",
+		"tailwindcss": "^4.1.5"
+	}
 }
